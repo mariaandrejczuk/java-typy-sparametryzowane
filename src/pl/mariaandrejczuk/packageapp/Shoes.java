@@ -8,5 +8,13 @@ public class Shoes {
         this.brand = brand;
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return "Shoes{" +
+                "brand='" + brand + '\'' +
+                ", size=" + size +
+                '}';
+    }
 }
 
