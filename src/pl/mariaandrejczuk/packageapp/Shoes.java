@@ -1,10 +1,11 @@
 package pl.mariaandrejczuk.packageapp;
 
-public class Shoes {
+public class Shoes extends Product {
     private String brand;
     private int size;
 
-    public Shoes(String brand, int size) {
+    public Shoes(double price, String brand, int size) {
+        super(price);
         this.brand = brand;
         this.size = size;
     }
