@@ -8,7 +8,7 @@ public class PackageApp {
         Scanner scanner = new Scanner(System.in, "UTF-8");
         Package<Shoes> shoesPackage = null;
         Package<Flour> flourPackage = null;
-        Package<Cat> catPackage = null;
+     // Package<Cat> catPackage = null;
 
         int option;
         do {
@@ -25,33 +25,37 @@ public class PackageApp {
                     displaySubMenu();
                     switch (option) {
                         case 1:
+                            System.out.print("Price: ");
+                            double price = scanner.nextDouble();
                             System.out.print("Brand: ");
                             String brand = scanner.nextLine();
                             System.out.print("Size: ");
                             int size = scanner.nextInt();
-                            Shoes shoes = new Shoes(brand, size);
+                            Shoes shoes = new Shoes(price, brand, size);
                             //  ShoesPackage shoesPackage = new ShoesPackage(shoes);
                             //  shoesPackage.send();
                             shoesPackage = new Package<>(shoes);
                             shoesPackage.send();
                             break;
                         case 2:
+                            System.out.print("Price: ");
+                            double flourPrice = scanner.nextDouble();
                             System.out.print("Name: ");
                             String name = scanner.nextLine();
                             System.out.print("Weight: ");
                             double weight = scanner.nextDouble();
-                            Flour flour = new Flour(name, weight);
+                            Flour flour = new Flour(flourPrice, name, weight);
                             //FlourPackage flourPackage = new FlourPackage(flour);
                             flourPackage = new Package<>(flour);
                             boolean sended = flourPackage.send();
                             break;
-                        case 3:
+                       /* case 3:
                             System.out.print("Name: ");
                             String catName = scanner.nextLine();
                             Cat cat = new Cat(catName);
                             catPackage = new Package<>(cat);
                             catPackage.send();
-                            break;
+                            break;*/
                     }
                     break;
                 case 2:
