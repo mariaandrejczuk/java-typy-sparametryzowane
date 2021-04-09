@@ -42,7 +42,7 @@ public class PackageApp {
                             Flour flour = new Flour(name, weight);
                             //FlourPackage flourPackage = new FlourPackage(flour);
                             flourPackage = new Package<>(flour);
-                            flourPackage.send();
+                            boolean sended = flourPackage.send();
                             break;
                     }
                     break;
@@ -50,11 +50,11 @@ public class PackageApp {
                     option = scanner.nextInt();
                     switch (option) {
                         case 1:
-                            shoesPackage.receive();
+                            Shoes shoes = shoesPackage.receive();
                             break;
 
                         case 2:
-                            flourPackage.receive();
+                            Flour flour = flourPackage.receive();
                             break;
                     }
             }
