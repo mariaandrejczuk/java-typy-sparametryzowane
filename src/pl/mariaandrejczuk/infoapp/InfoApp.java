@@ -9,9 +9,9 @@ public class InfoApp {
         int option = 0;
         do {
             System.out.println();
-            System.out.println("1 - postalcode in letters");
-            System.out.println("2 - postalcode in numbers");
-            System.out.println("3 - very long postalcode");
+            System.out.println("1 - Id in numbers.");
+            //System.out.println("2 - Id in letters: ");
+            System.out.println("3 - very long Id.");
             option = scanner.nextInt();
             switch (option) {
                 case 1:
@@ -31,7 +31,7 @@ public class InfoApp {
                     System.out.println();
                     break;
 
-                case 2:
+                /*case 2:
                     scanner.nextLine();
                     System.out.print("Name: ");
                     String name1 = scanner.nextLine();
@@ -43,7 +43,7 @@ public class InfoApp {
                     int postalcode1 = scanner.nextInt();
                     Person<String, Integer> person1 = new Person<>(name1, surname1, identifier1, postalcode1);
                     System.out.print(person1);
-                    break;
+                    break;*/
 
                 case 3:
                     scanner.nextLine();
