@@ -1,6 +1,6 @@
 package pl.mariaandrejczuk.infoapp;
 
-public class Person <T, C>{
+public class Person <T extends Number, C>{
     private String name;
     private String surname;
     private T indentifier;
